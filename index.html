@@ -33,7 +33,9 @@
  <footer>フッター</footer>
  <!----- /footer ----->
    <script type="text/javascript">
-      window.location = `http://192.168.l0.l51:30080/callback${window.location.search}`
+     const query = new URLSearchParams(window.location.search);
+     const localhost = query.get('localhost');
+      window.location = `http://${localhost}/callback${window.location.search}`
   </script>
  </body>
 </html>
