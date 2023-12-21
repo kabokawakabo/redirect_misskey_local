@@ -34,8 +34,9 @@
  <!----- /footer ----->
    <script type="text/javascript">
      const query = new URLSearchParams(window.location.search);
-     const [dn, method, host, ...rest] = query.get('dn_method_host')?.split('__');
-      window.location = `http://${host}/callback?dn=${dn}&method=${method}`
+     const [dn, method, host, session, ...rest] = query.get('dn_method_host')?.split('__');
+     const session = query.get('session')
+      window.location = `http://${host}/callback$?session=${session}&dn=${dn}&host_method=${method}`
   </script>
  </body>
 </html>
