@@ -34,7 +34,7 @@
  <!----- /footer ----->
    <script type="text/javascript">
      const query = new URLSearchParams(window.location.search);
-     const localhost = query.get('localhost');
+     const localhost = query.get('localhost_url');
       window.location = `http://${localhost}/callback${window.location.search}`
   </script>
  </body>
