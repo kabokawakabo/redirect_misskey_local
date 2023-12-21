@@ -33,9 +33,7 @@
  <footer>フッター</footer>
  <!----- /footer ----->
    <script type="text/javascript">
-     const query = URLSearchParams(windows.location.search);
-     const pathname = query.get('dn') +'/'+ query.get('method');
-      window.location.href(`http://192.168.l0.l51:30080/callback/${pathname}${window.location.search}`)
+      window.location.href(`http://192.168.l0.l51:30080/callback${window.location.search}`)
   </script>
  </body>
 </html>
